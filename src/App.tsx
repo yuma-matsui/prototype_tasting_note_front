@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import Hello from './components/Hello'
 
-const App: FC = () => <Hello />
+const App: FC = () => <h1>Hello</h1>
 
 export default App
