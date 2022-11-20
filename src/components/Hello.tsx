@@ -3,7 +3,6 @@ import client from '../lib/api/client'
 
 const Hello = () => {
   const [hello, setHello] = useState<string>('')
-  const hello2 = 'hello2'
 
   useEffect(() => {
     const fetchHello = async () => {
