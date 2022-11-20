@@ -1,9 +1,6 @@
-import Hello from "./components/Hello";
+import { FC } from 'react'
+import Hello from './components/Hello'
 
-function App() {
-  return (
-    <Hello />
-  )
-}
+const App: FC = () => <Hello />
 
-export default App;
+export default App

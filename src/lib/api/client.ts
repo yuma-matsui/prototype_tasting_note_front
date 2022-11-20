@@ -2,12 +2,13 @@ import axios from 'axios'
 import applyCaseMiddleware from 'axios-case-converter'
 
 const options = {
-  ignoreHeaders: true
+  ignoreHeaders: true,
 }
 
 const client = applyCaseMiddleware(
   axios.create({
-    baseURL: `${process.env.REACT_APP_API_URL}/api/v1`
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    baseURL: `${process.env.REACT_APP_API_URL}/api/v1`,
   }),
   options
 )

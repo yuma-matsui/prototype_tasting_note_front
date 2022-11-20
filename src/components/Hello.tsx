@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react"
-import client from "../lib/api/client"
+import { useEffect, useState } from 'react'
+import client from '../lib/api/client'
 
 const Hello = () => {
   const [hello, setHello] = useState<string>('')
 
   useEffect(() => {
     const fetchHello = async () => {
-      const hello = (await client.get<string>('/hello')).data
-      setHello(hello)
+      const result = (await client.get<string>('/hello')).data
+      setHello(result)
     }
-    fetchHello()
+
+    fetchHello().catch((e) => {
+      if (e instanceof Error) console.log(e.message)
+    })
   }, [])
 
   return (
