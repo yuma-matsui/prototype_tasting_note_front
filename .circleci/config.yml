@@ -11,12 +11,9 @@ jobs:
 
     steps:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
-
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "front/package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: install-packages
@@ -24,9 +21,9 @@ jobs:
           working_directory: front
       
       - save_cache:
-          key: v1-dependencies-{{ checksum "front/package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
-            - front/node_modules
+            - ./node_modules
       
       - run:
           name: lint
