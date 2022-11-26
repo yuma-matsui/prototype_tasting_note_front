@@ -9,7 +9,6 @@ executors:
       - image: cimg/node:18.12.1
         environment:
           NODE_ENV: test
-      - image: cimg/python:3.6
   production_image:
     docker:
       - image: cimg/node:18.12.1
