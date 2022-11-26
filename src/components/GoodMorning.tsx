@@ -1,5 +1,5 @@
 import { FC } from 'react'
 
-const GoodMorning: FC = () => <h1>Good Morning</h1>
+const GoodMorning: FC = () => <h2>Good Morning</h2>
 
 export default GoodMorning
