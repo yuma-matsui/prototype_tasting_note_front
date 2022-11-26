@@ -12,7 +12,6 @@ executors:
   production_image:
     docker:
       - image: cimg/node:18.12.1
-      - image: cimg/python:3.6
         environment:
           NODE_ENV: production
 
