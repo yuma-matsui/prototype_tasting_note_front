@@ -53,7 +53,7 @@ jobs:
       - run:
           name: build
           command: npm run build
-      - aws-s3/copy:
+      - aws-s3/sync:
           from: build
           to: s3://tasting-note-staging
 
@@ -64,6 +64,9 @@ workflows:
           filters:
             branches:
               ignore: main
+      # - build_and_deploy:
+      #     requires:
+      #       - build_and_test
   build_deploy:
     jobs:
       - build_and_deploy:
