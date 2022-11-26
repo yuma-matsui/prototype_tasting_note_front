@@ -63,10 +63,7 @@ workflows:
       - build_and_test:
           filters:
             branches:
-              only: development
+              ignore: main
       - build_and_deploy:
           requires:
             - build_and_test
-          filters:
-            branches:
-              only: main
