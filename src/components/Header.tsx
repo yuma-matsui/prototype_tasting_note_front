@@ -16,6 +16,9 @@ const Header: FC<Props> = ({ children }) => (
           <li>
             <Link to="/good_night">Good Nightページへ</Link>
           </li>
+          <li>
+            <Link to="/good_morning">Good Morningページへ</Link>
+          </li>
         </ul>
       </nav>
     </header>
