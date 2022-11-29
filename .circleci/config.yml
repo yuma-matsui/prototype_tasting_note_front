@@ -56,6 +56,7 @@ jobs:
       - aws-s3/sync:
           from: build
           to: s3://tasting-note-staging
+      - run: aws cloudfront create-invalidation --distribution-id $CF_DISTRIBUTION_ID --paths '/*'
 
 workflows:
   test:
