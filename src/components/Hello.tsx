@@ -19,6 +19,7 @@ const Hello: FC = () => {
   return (
     <Header>
       <h1>{hello}</h1>
+      <p>{process.env.REACT_APP_API_URL}</p>
     </Header>
   )
 }
