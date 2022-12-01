@@ -52,7 +52,7 @@ jobs:
       - npm_install
       - run:
           name: build
-          command: npm run build:production
+          command: npm run build
       - aws-s3/sync:
           from: build
           to: s3://tasting-note-staging
